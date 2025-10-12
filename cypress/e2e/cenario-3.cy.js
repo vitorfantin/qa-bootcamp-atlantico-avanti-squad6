@@ -1,12 +1,10 @@
 
-describe('Cenário 3 - Avaliações', () => {
+describe('Cenário 3 - Avaliações de Produtos', () => {
 
   before(() => {
     cy.visit('');
-    cy.fazerLogin('santos@santos.com', 'Santos#1221');
-    cy.validarLogin();
   });
-  it('Teste One', () => {
+  it('CT003 - Avaliar sem estar Logado', () => {
 
   });
 
