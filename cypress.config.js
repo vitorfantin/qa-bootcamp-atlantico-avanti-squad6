@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: "9y1axh",
   e2e: {
     baseUrl: 'https://luma-demo.scandipwa.com/',
     defaultCommandTimeout: 300000, // foi definido para 5min pois API do projeto é muito lento, não é boa prática em utilizar tempo excessivamente alto
