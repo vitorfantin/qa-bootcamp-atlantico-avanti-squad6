@@ -20,6 +20,16 @@ O site permite:
 Este é um **ambiente de teste**, portanto, os produtos, preços e transações são **fictícios**, servindo apenas para fins de **avaliação de funcionalidades, interface e usabilidade**.
 
 ---
+## ⚡ Integração Contínua e Cypress Cloud
+
+O projeto possui integração com **GitHub Actions**, permitindo a execução automatizada dos testes em cada push ou pull request nas branches `main` ou `master`.  
+
+Além disso, os testes estão conectados ao **Cypress Cloud**, oferecendo:
+- Visualização de resultados de testes em tempo real;  
+- Histórico completo de execuções;  
+- Comparação entre runs e análise de falhas;  
+- Logs detalhados com screenshots e vídeos.
+
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -100,6 +110,8 @@ As atualizações **não devem ser enviadas diretamente para a branch `main`**.
    O PR será revisado por outro membro da equipe antes da aprovação.
 
 💡 **Dica:** Use nomes de branch descritivos, por exemplo:
+- `feature/adicionar-casos-teste-cenario-3`
+- `refactor/casos-teste-cenario-3`
 - `feature/adicionar-teste-login`
 - `fix/ajuste-elemento-carrinho`
 - `refactor/otimizar-estrutura-testes`
@@ -122,14 +134,14 @@ As atualizações **não devem ser enviadas diretamente para a branch `main`**.
 
 ## 👥 Equipe do Projeto
 
-| Integrante | Função |
-|-------------|--------|
-| **Vitor Evangelista Fantin** | 🧭 Team Líder de QA |
-| **Adriana Machado Martins Heck** | 🔍 Analista de Testes |
-| **Michael Freitas Lima Machado** | 🔍 Analista de Testes |
-| **Guilherme Silva Santos** | 🔍 Analista de Testes |
+| Integrante                         | Função               |
+| ---------------------------------- | -------------------- |
+| **Vitor Evangelista Fantin**       | 🧭 Team Líder de QA   |
+| **Adriana Machado Martins Heck**   | 🔍 Analista de Testes |
+| **Michael Freitas Lima Machado**   | 🔍 Analista de Testes |
+| **Guilherme Silva Santos**         | 🔍 Analista de Testes |
 | **Victor Ravel Santos Cavalcante** | 🔍 Analista de Testes |
-| **Amanda Ramos** | 🔍 Analista de Testes |
+| **Amanda Ramos**                   | 🔍 Analista de Testes |
 
 ---
 
