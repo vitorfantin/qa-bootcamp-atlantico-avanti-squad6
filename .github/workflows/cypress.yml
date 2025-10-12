@@ -27,5 +27,5 @@ jobs:
                   record: true # Ativa o envio para Cypress Dashboard
                   parallel: false # Ajuste se quiser rodar paralelo
                   group: "GitHub Actions" # Nome do grupo no Dashboard
-                  
-                  CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        env:
+                CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
