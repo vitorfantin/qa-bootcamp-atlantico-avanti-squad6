@@ -1,5 +1,6 @@
 export function escolheCamisetaArgusAllWeatherTankGrayS() {
     cy.get('p.ProductCard-Name').contains('Argus All-Weather Tank').click();
+    cy.url().should('eq', 'https://luma-demo.scandipwa.com/argus-all-weather-tank.html')
     cy.get('#color_wrapper div.FieldSelect-Clickable').click();
     cy.get('#o395119').click();
     cy.get('#size_wrapper div.FieldSelect-Clickable').click();
@@ -69,5 +70,8 @@ export function clicarBtnEnviarReview() {
 };
 
 export function validarEnvioReview() {
-    cy.get('#root p.Notification-Text').should('be.visible').and('contain', 'You submitted your review for moderation.');
+    cy.get('#root p.Notification-Text')
+        .then(($el) => {
+            expect($el.text().trim()).to.eq('You must be logged in to review');
+        });
 };

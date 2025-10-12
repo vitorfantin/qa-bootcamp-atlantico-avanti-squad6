@@ -14,7 +14,7 @@ describe('Cenário 3 - Avaliações de Produtos', () => {
     pageCenario3.qtdEstrelasPrice(3);
     pageCenario3.inputNomeReview('Michael');
     pageCenario3.inputTituloReview('Muito bom recomendo');
-    pageCenario3.inputDetalhesReview('Material é muito boa, leve e confortável, vale muito a pena comprar!');
+    pageCenario3.inputDetalhesReview('Material é muito bom, leve e confortável, vale muito a pena comprar!');
     pageCenario3.clicarBtnEnviarReview();
     pageCenario3.validarEnvioReview();
   });
