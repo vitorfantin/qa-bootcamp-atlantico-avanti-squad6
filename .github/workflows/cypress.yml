@@ -30,7 +30,7 @@ jobs:
               with:
                   browser: firefox              
                   record: true                 # envia resultados para o Cypress Dashboard
-                  parallel: false              # ajuste se quiser rodar paralelo
+                  parallel: true              # ajuste se quiser rodar paralelo
                   group: "GitHub Actions - Firefox"  # nome do grupo no Dashboard
         env:
              CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
