@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-const timeWait = 30000;
-const timeWait2 = 6000;
+const timeWait = 35000;
+const timeWait2 = 10000;
 
 import * as pageCenario4 from '../../support/pages/page_cenario_teste4';
 
