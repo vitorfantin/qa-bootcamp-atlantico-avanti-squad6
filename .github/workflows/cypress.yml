@@ -28,9 +28,9 @@ jobs:
             - name: Run Cypress tests
               uses: cypress-io/github-action@v5
               with:
-                  browser: chrome              # 👈 executa no Chrome
+                  browser: firefox              
                   record: true                 # envia resultados para o Cypress Dashboard
                   parallel: false              # ajuste se quiser rodar paralelo
-                  group: "GitHub Actions - Chrome"  # nome do grupo no Dashboard
+                  group: "GitHub Actions - Firefox"  # nome do grupo no Dashboard
         env:
              CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
