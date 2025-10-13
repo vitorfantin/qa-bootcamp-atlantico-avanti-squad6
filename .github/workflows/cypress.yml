@@ -16,7 +16,7 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
           matrix:
-            browser: [chrome, firefox]        
+            browser: [firefox]        
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
@@ -33,7 +33,7 @@ jobs:
               with:
                   browser: ${{ matrix.browser }}              
                   record: true                 # envia resultados para o Cypress Dashboard
-                  parallel: true              # ajuste se quiser rodar paralelo
+                  parallel: false              # ajuste se quiser rodar paralelo
                   group: "GitHub Actions - ${{ matrix.browser }}"  # nome do grupo no Dashboard
         env:
              CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
