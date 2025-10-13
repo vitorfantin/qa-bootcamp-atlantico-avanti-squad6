@@ -20,3 +20,4 @@ describe('Cenário 3 - Avaliações de Produtos', () => {
   });
 
 });
+
