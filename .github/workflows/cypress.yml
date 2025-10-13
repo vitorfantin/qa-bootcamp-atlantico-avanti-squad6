@@ -33,7 +33,7 @@ jobs:
               with:
                   browser: ${{ matrix.browser }}              
                   record: true                 # envia resultados para o Cypress Dashboard
-                  parallel: false              # ajuste se quiser rodar paralelo
+                  parallel: true              # ajuste se quiser rodar paralelo
                   group: "GitHub Actions - ${{ matrix.browser }}"  # nome do grupo no Dashboard
         env:
              CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
