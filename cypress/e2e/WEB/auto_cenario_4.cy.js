@@ -87,10 +87,5 @@ describe('Cenário 4 - Carrinho de compras', () => {
 
     });
 
-    it('CT 006 - Validar cupom de desconto na página carrinho completo', () => {
-        // cy.fazerLogin();
-        // cy.validarLogin();
-    });
-
 
 });
