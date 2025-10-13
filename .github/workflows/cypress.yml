@@ -14,6 +14,9 @@ jobs:
     test:
         timeout-minutes: 120
         runs-on: ubuntu-latest
+        strategy:
+          matrix:
+            browser: [chrome, firefox]        
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
@@ -28,9 +31,9 @@ jobs:
             - name: Run Cypress tests
               uses: cypress-io/github-action@v5
               with:
-                  browser: firefox              
+                  browser: ${{ matrix.browser }}              
                   record: true                 # envia resultados para o Cypress Dashboard
                   parallel: true              # ajuste se quiser rodar paralelo
-                  group: "GitHub Actions - Firefox"  # nome do grupo no Dashboard
+                  group: "GitHub Actions - ${{ matrix.browser }}"  # nome do grupo no Dashboard
         env:
              CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
