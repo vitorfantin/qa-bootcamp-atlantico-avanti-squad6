@@ -4,7 +4,7 @@ describe('Cenário 3 - Avaliações de Produtos', () => {
   before(() => {
     cy.visit('');
   });
-  it('CT003 - Avaliar sem estar Logado', () => {
+  it('CT003 - Bloqueio ao enviar review sem estar Logado', () => {
     pageCenario3.escolheCamisetaArgusAllWeatherTankGrayS();
     pageCenario3.clicarAbaReviews();
     pageCenario3.clicarBtnEscreverReview();
