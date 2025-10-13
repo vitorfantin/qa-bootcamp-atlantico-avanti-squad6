@@ -138,7 +138,7 @@ As atualizações **não devem ser enviadas diretamente para a branch `main`**.
 | ---------------------------------- | --------------------   | --------------------                            | --------------------
 | **Vitor Evangelista Fantin**       | 🧭 Team Líder de QA   | [Clique Aqui](https://github.com/vitorfantin)   | [Clique Aqui](https://www.linkedin.com/in/vitorfantin/)
 | **Adriana Machado Martins Heck**   | 🔍 Analista de Testes |
-| **Michael Freitas Lima Machado**   | 🔍 Analista de Testes |
+| **Michael Freitas Lima Machado**   | 🔍 Analista de Testes | [Clique Aqui](https://github.com/MichaelMachad0)   | [Clique Aqui](https://www.linkedin.com/in/michael-machado-qa)
 | **Guilherme Silva Santos**         | 🔍 Analista de Testes |
 | **Victor Ravel Santos Cavalcante** | 🔍 Analista de Testes |
 | **Amanda Ramos**                   | 🔍 Analista de Testes |
