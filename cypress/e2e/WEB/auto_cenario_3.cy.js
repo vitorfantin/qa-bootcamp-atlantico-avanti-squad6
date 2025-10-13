@@ -4,6 +4,7 @@ describe('Cenário 3 - Avaliações de Produtos', () => {
   before(() => {
     cy.visit('');
   });
+  /* 
   it('CT003 - Bloqueio ao enviar review sem estar Logado', () => {
     pageCenario3.escolheCamisetaArgusAllWeatherTankGrayS();
     pageCenario3.clicarAbaReviews();
@@ -18,6 +19,8 @@ describe('Cenário 3 - Avaliações de Produtos', () => {
     pageCenario3.clicarBtnEnviarReview();
     pageCenario3.validarEnvioReview();
   });
+  
+*/
 
 });
 

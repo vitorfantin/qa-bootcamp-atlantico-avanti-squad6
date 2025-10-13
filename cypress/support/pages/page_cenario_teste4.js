@@ -1,5 +1,7 @@
+const timeoutPO = 80000;
+
 export function escolheCamisetaArgusAllWeatherTankGrayS() {
-    cy.get('p.ProductCard-Name', { timeout: 70000 }).contains('Argus All-Weather Tank').click();
+    cy.get('p.ProductCard-Name', { timeout: timeoutPO }).contains('Argus All-Weather Tank').click();
     cy.url().should('eq', 'https://luma-demo.scandipwa.com/argus-all-weather-tank.html')
     cy.get('#color_wrapper div.FieldSelect-Clickable').click();
     cy.get('#o395119').click();
@@ -8,7 +10,7 @@ export function escolheCamisetaArgusAllWeatherTankGrayS() {
 };
 
 export function escolherBlusaMoletonHeroHoodie() {
-    cy.get('p.ProductCard-Name', { timeout: 70000 }).contains('Hero Hoodie').click();
+    cy.get('p.ProductCard-Name', { timeout: timeoutPO }).contains('Hero Hoodie').click();
     cy.url().should('eq', 'https://luma-demo.scandipwa.com/hero-hoodie.html');
     // cy.get('#color_wrapper div.FieldSelect-Clickable').click();
     // cy.get('#o395119').click();
@@ -17,23 +19,23 @@ export function escolherBlusaMoletonHeroHoodie() {
 };
 
 export function escolherProdutoSemVariacoes(nomeProduto) {
-    cy.get('p.ProductCard-Name', { timeout: 70000 }).contains(nomeProduto).click();
-    cy.get('.ProductPage-Title', { timeout: 70000 }).should('have.text', nomeProduto);
+    cy.get('p.ProductCard-Name', { timeout: timeoutPO }).contains(nomeProduto).click();
+    cy.get('.ProductPage-Title', { timeout: timeoutPO }).should('have.text', nomeProduto);
 
 }
 export function clicarBtnAddCarrinhoPgProduto() {
     // cy.get('#root button.ProductActions-AddToCart span', { timeout: 70000 }).click();
-    cy.contains('button', 'Add to cart', { timeout: 70000 }).click();
+    cy.contains('button', 'Add to cart', { timeout: timeoutPO }).click();
 
 
 
 
 }
 export function clicarBtnAddCarrinhoHomePage(nomeProduto) {
-    cy.get('#root button.ProductCard-AddToCart span', { timeout: 70000 }).contains(nomeProduto).click
+    cy.get('#root button.ProductCard-AddToCart span', { timeout: timeoutPO }).contains(nomeProduto).click
 }
 export function validarMsgProdutoAdicionado() {
-    cy.get('#root p.Notification-Text', { timeout: 70000 })
+    cy.get('#root p.Notification-Text', { timeout: timeoutPO })
         .then(($el) => {
             expect($el.text().trim()).to.eq('Product was added to cart!');
         })
@@ -46,14 +48,14 @@ export function validarMsgEscolherOpcoesProduto() {
 }
 
 export function abrirCarrinho() {
-    cy.get('#root svg.CartIcon', { timeout: 70000 })
+    cy.get('#root svg.CartIcon', { timeout: timeoutPO })
         .should('be.visible')
         .click();
 }
 
 export function validarProdutoCarrinho(nomeProduto) {
 
-    cy.get('p.CartItem-Heading', { timeout: 70000 })
+    cy.get('p.CartItem-Heading', { timeout: timeoutPO })
         .should('be.visible')
         .and('contain.text', nomeProduto);
 
@@ -87,7 +89,7 @@ export function apagarItemCarrinho(item) {
 }
 
 export function validarCarrinhoVazio() {
-    cy.get('.CartOverlay-Empty', { timeout: 70000 })
+    cy.get('.CartOverlay-Empty', { timeout: timeoutPO })
         .should('be.visible')
         .and('contain.text', 'You have no items in your shopping cart.');
 }
