@@ -30,7 +30,7 @@ jobs:
               with:
                   browser: chrome              # 👈 executa no Chrome
                   record: true                 # envia resultados para o Cypress Dashboard
-                  parallel: true              # ajuste se quiser rodar paralelo
+                  parallel: false              # ajuste se quiser rodar paralelo
                   group: "GitHub Actions - Chrome"  # nome do grupo no Dashboard
         env:
              CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
