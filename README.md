@@ -156,11 +156,15 @@ Os testes foram estruturados para validar:
 
 ---
 
-## 📊 Relatórios
+## 📊 Relatórios desenvolvidos no bootcamp
 
-Os resultados dos testes podem ser visualizados diretamente na interface do Cypress ou exportados via:
-```bash
-npx cypress run --reporter mochawesome
-```
+| Nome                         | Link para visualizar                
+| ---------------------------------- | --------------------   | 
+| **Especificação de Bugs**       | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Especifica%C3%A7%C3%A3o%20de%20Bugs%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
+| **Especificação de Teste**       | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Especifica%C3%A7%C3%A3o%20de%20Teste%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
+| **Plano de Teste**       |[Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Plano%20de%20Teste%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
+| **Relatório de Teste**       | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Relat%C3%B3rio%20de%20Teste%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
+
+
 
 ---
