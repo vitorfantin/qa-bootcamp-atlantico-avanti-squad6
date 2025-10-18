@@ -5,10 +5,12 @@ on:
         branches: [main, master]
         paths-ignore:
           - 'README.md'        # Ignora commits que alteram apenas o README
+          - 'documentos_relatorios_desenvolvidos/**' # Ignorar a pasta e subpastas
     pull_request:
         branches: [main, master]
         paths-ignore:
           - 'README.md'        # Ignora commits que alteram apenas o README
+          - 'documentos_relatorios_desenvolvidos/**' # Ignorar a pasta e subpastas
     workflow_dispatch:
 jobs:
     test:
