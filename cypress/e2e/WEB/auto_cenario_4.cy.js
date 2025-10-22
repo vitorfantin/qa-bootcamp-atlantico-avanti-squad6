@@ -82,3 +82,6 @@ describe("Cenário 4 - Carrinho de compras", () => {
     pageCenario4.validarBtnDesabilitado();
   });
 });
+
+
+// teste pull request
