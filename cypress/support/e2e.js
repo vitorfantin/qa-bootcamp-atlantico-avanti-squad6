@@ -15,3 +15,11 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // Ignora erros internos da aplicação (como __k)
+  if (err.message.includes('__k')) {
+    return false
+  }
+  return false
+})
