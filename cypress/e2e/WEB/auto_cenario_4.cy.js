@@ -10,6 +10,8 @@ beforeEach(() => {
       delete win.navigator.serviceWorker;
     },
   });
+  cy.wait(timeWait2);
+  cy.reload();
 });
 
 describe("Cenário 4 - Carrinho de compras", () => {
@@ -26,13 +28,16 @@ describe("Cenário 4 - Carrinho de compras", () => {
   });
 
   it("CT 002 - Adicionar produto sem selecionar opções", () => {
+    cy.scrollTo("bottom");
     pageCenario4.escolherBlusaMoletonHeroHoodie();
     cy.wait(timeWait);
     pageCenario4.clicarBtnAddCarrinhoPgProduto();
     pageCenario4.validarMsgEscolherOpcoesProduto();
+    cy.wait(timeWait2);
   });
 
   it("CT 003 - Alterar quantidade de item ", () => {
+    cy.scrollTo("bottom");
     pageCenario4.escolheCamisetaArgusAllWeatherTankGrayS();
     pageCenario4.addQtdProduto(3);
     cy.wait(timeWait);
@@ -43,6 +48,7 @@ describe("Cenário 4 - Carrinho de compras", () => {
     pageCenario4.validarMsgProdutoAdicionado();
     pageCenario4.abrirCarrinho();
     pageCenario4.validarProdutoCarrinho("Argus All-Weather Tank");
+    cy.wait(timeWait2);
   });
 
   it("CT 004 - Remover item do carrinho", () => {
@@ -71,13 +77,18 @@ describe("Cenário 4 - Carrinho de compras", () => {
 
     pageCenario4.abrirCarrinho();
     pageCenario4.validarProdutoCarrinho("Sprite Foam Roller");
+    cy.wait(timeWait2);
 
     pageCenario4.abrirCarrinho();
     pageCenario4.apagarItemCarrinho(1);
     pageCenario4.validarProdutoRemovidoCarrinho("Clamber");
+    cy.wait(timeWait2);
   });
 
   it("CT 005 - Adicionar produto indisponível (out of stock)", () => {
+    cy.reload();
+    cy.wait(timeWait2);
+    cy.scrollTo("bottom");
     pageCenario4.escolherProdutoSemVariacoes("LifeLong Fitness IV");
     pageCenario4.validarBtnDesabilitado();
   });
