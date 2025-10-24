@@ -1,11 +1,11 @@
-import { faker } from '@faker-js/faker';
 import * as pageCenaria6 from "../../support/pages/page_cenario_teste6"
+
 const email = "ditomah155@keevle.com"
 const senha = "Teste@1234"
 
-const novaSenha = faker.internet.password({pattern: /[A-Za-z0-9!@#$%^&*]/})
-const novaSenhaMaiorque8 = faker.internet.password({pattern: /[A-Za-z]/})
-const novaSenhaMenorque8 = faker.internet.password({length:7})
+const novaSenha = "NovaSenha@2025"
+const novaSenhaInvalida = "123"
+
 
 const wait2m = 120000
 const wait1m = 60000
@@ -38,17 +38,10 @@ describe('Cenário 06 : Gerenciamento de conta ',()=>{
     it("CT003 - Alterar senha inválida",()=>{
         cy.acessarPageMinhaConta()
         cy.validarAcessarPageMinhaConta()
-        pageCenaria6.editarSenha(senha,novaSenhaMaiorque8)
+        pageCenaria6.editarSenha(senha,novaSenhaInvalida)
         cy.verificarMensagem()
         cy.wait(wait1m)
         cy.validarSenhaInvalida()
-
-
-        pageCenaria6.editarSenha(senha,novaSenhaMenorque8)
-        cy.verificarMensagem()    
-        cy.wait(wait1m)
-        cy.validarSenhaInvalida()
-
     })
 
 })

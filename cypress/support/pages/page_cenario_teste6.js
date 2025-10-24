@@ -1,16 +1,11 @@
-import { faker } from '@faker-js/faker';
-
 export function acessarMinhaConta () {
     cy.get("#myAccount").click()
 };
 
-export function editarNome(){
-    const firstName = faker.person.firstName()
-    const lastName = faker.person.lastName()
-    
+export function editarNome(){    
     cy.get('button.Button.Button_isHollow').contains('Edit details').click()
-    cy.get('input[name="firstname"]').clear().type(firstName)
-    cy.get('input[name="lastname"]').clear().type(lastName)
+    cy.get('input[name="firstname"]').clear().type("NovoNome")
+    cy.get('input[name="lastname"]').clear().type("NovoSobrenome")
     cy.get('button.Button.MyAccountInformation-Submit').contains('Save').click()
 }
 
