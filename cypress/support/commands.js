@@ -41,3 +41,40 @@ Cypress.Commands.add('menuGear', () => {
     cy.url().should('eq', 'https://luma-demo.scandipwa.com/gear.html')
 
 })
+
+Cypress.Commands.add('restaurarSenha',(email,senha,novaSenha)=>{
+            
+            cy.visit("https://luma-demo.scandipwa.com")
+            cy.fazerLogin(email,novaSenha)
+            cy.validarLogin()  
+
+            cy.get("#myAccount").click()
+            cy.url().should('include', '/customer/account')
+            cy.get('button.Button.Button_isHollow').contains('Change password').click()
+            cy.get('input[name="password"]').clear().type(novaSenha)
+            cy.get('input[name="newPassword"]').clear().type(senha)
+            cy.get('input[name="confirmNewPassword"]').clear().type(senha)
+            cy.get('button.Button.MyAccountInformation-Submit').contains('Save').click()
+
+})
+
+Cypress.Commands.add('acessarPageMinhaConta',()=>{
+    cy.get("#myAccount").click()
+})
+
+Cypress.Commands.add('validarAcessarPageMinhaConta',()=>{
+    cy.url().should('include', '/customer/account',)
+})
+
+Cypress.Commands.add('validarEditarNome',()=>{
+    cy.contains('You saved the account information.').should('be.visible')
+})
+Cypress.Commands.add('verificaMensagem',()=>{
+    cy.contains("/(Minimum of different classes of characters in password is 3|Minimum 8 characters!)/").should('be.visible')
+})
+Cypress.Commands.add('validarSenhaInvalida',()=>{
+    cy.url().should('include', '/customer/account/edit')
+})
+Cypress.Commands.add('loginValidar',()=>{
+    cy.contains('You are successfully logged in!').should('be.visible',{ timeout: 120000 })
+})
