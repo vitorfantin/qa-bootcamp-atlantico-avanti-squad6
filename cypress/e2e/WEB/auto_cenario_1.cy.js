@@ -25,6 +25,5 @@ describe('Cenario 01 - Cadastro', () => {
         cy.visit('https://luma-demo.scandipwa.com/')
         cy.get('#myAccount svg.UserIcon').click();
         cy.get('#root li:nth-child(8) button.MyAccountTabListItem-Button').click();
-
     });
 });
