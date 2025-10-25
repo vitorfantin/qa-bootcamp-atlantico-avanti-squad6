@@ -39,7 +39,7 @@ describe('Cenário 06 : Gerenciamento de conta ', () => {
         cy.restaurarSenha(contas_cadastradas.emailCC2, contas_cadastradas.senhaCC2, novaSenha)
     })
 
-    it("CT003 - Alterar senha  - ARRUMAR ", () => {
+    it("CT003 - Alterar senha  - ° ", () => {
         cy.fazerLogin(contas_cadastradas.emailCC3, contas_cadastradas.senhaCC3);
         cy.validarLogin();
 
@@ -63,7 +63,7 @@ describe('Cenário 06 : Gerenciamento de conta ', () => {
         pageCenaria6.cadastrarEnderecoEValidar();
     });
 
-    it('CT005 - Editar endereço existente - ARRUAMR', function () {
+    it('CT005 - Editar endereço existente - °', function () {
         const novoNumero = 200;
         const novoTelefone = 11888887777;
 
@@ -102,7 +102,7 @@ describe('Cenário 06 : Gerenciamento de conta ', () => {
         });
     });
 
-    it.only('CT006 - Excluir endereço existente - ARRUMAR', function () {
+    it.only('CT006 - Excluir endereço existente - °', function () {
 
         cy.fazerLogin(contas_cadastradas.emailCC2, contas_cadastradas.senhaCC2);
         cy.validarLogin();
