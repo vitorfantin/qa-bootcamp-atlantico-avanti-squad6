@@ -185,4 +185,4 @@ Os testes cobrem:
 | **Especificação de Teste**   | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Especifica%C3%A7%C3%A3o%20de%20Teste%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
 | **Plano de Teste**           | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Plano%20de%20Teste%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
 | **Relatório de Teste**       | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Relat%C3%B3rio%20de%20Teste%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
-| **Apresentação DemoDay**     | [Clique Aqui](INSERIR URL DO ARQUIVO)
+| **Apresentação DemoDay**     | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Apresentac%CC%A7a%CC%83o%20DemoDay%20-%20Squad%206%20.pptx)
