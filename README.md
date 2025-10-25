@@ -7,49 +7,49 @@
 
 ## 🛍️ Sobre o Luma Demo
 
-O **Luma Demo** é um site de demonstração de e-commerce baseado no **Magento 2** e **ScandiPWA**.  
-Ele simula uma loja virtual com catálogo de produtos divididos em categorias como roupas e acessórios.  
+O **Luma Demo** é um site de demonstração de e-commerce baseado no **Magento 2** e **ScandiPWA**, simulando uma loja virtual com produtos divididos em categorias como roupas e acessórios.  
 
 O site permite:
-- Visualizar itens e detalhes de produtos;  
-- Aplicar filtros e realizar buscas;  
-- Adicionar produtos ao carrinho;  
-- Navegar entre páginas institucionais.
+- Visualizar itens e detalhes de produtos  
+- Aplicar filtros e realizar buscas  
+- Adicionar produtos ao carrinho  
+- Navegar entre páginas institucionais
 
-⚠️ **Importante:**  
-Este é um **ambiente de teste**, portanto, os produtos, preços e transações são **fictícios**, servindo apenas para fins de **avaliação de funcionalidades, interface e usabilidade**.
+⚠️ **Importante:** Este é um **ambiente de teste**; produtos, preços e transações são **fictícios**, apenas para **avaliação de funcionalidades, interface e usabilidade**.
 
 ---
+
 ## ⚡ Integração Contínua e Cypress Cloud
 
-O projeto possui integração com **GitHub Actions**, permitindo a execução automatizada dos testes em cada push ou pull request nas branches `main` ou `master`.  
+O projeto possui integração com **GitHub Actions**, executando testes automaticamente em cada push ou pull request nas branches `main` ou `master`.  
 
-Além disso, os testes estão conectados ao **Cypress Cloud**, oferecendo:
-- Visualização de resultados de testes em tempo real;  
-- Histórico completo de execuções;  
-- Comparação entre runs e análise de falhas;  
-- Logs detalhados com screenshots e vídeos.
+Além disso, os testes estão conectados ao **Cypress Cloud**, permitindo:
+- 📈 Visualização de resultados em tempo real  
+- 🕒 Histórico completo de execuções  
+- 🔍 Comparação entre runs e análise de falhas  
+- 📸 Logs detalhados com screenshots e vídeos
 
+---
 
 ## 🚀 Tecnologias Utilizadas
 
-- [Cypress](https://www.cypress.io/) – Framework de automação de testes end-to-end  
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) – Linguagem base para os testes  
+- [Cypress](https://www.cypress.io/) – Automação de testes end-to-end  
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) – Linguagem base  
 - [Node.js](https://nodejs.org/) – Ambiente de execução  
-- [GitHub](https://github.com/) – Controle de versão e colaboração em equipe  
-- [VS Code](https://code.visualstudio.com/) – Editor de código utilizado no projeto
+- [GitHub](https://github.com/) – Controle de versão  
+- [VS Code](https://code.visualstudio.com/) – Editor de código
 
 ---
 
 ## 🎯 Objetivo do Projeto
 
 Desenvolver uma suíte de testes automatizados que valide o comportamento do site **Luma Demo**, cobrindo:
-- Fluxo de compra e adição ao carrinho;  
-- Aplicação de filtros e busca de produtos;  
-- Validação de elementos visuais e navegação;  
-- Testes de interface e comportamento responsivo.
+- Fluxo de compra e adição ao carrinho  
+- Aplicação de filtros e busca de produtos  
+- Validação de elementos visuais e navegação  
+- Testes de interface e comportamento responsivo
 
-O foco é **garantir a qualidade** e **detectar possíveis falhas** antes da entrega, aplicando boas práticas de QA.
+O foco é **garantir a qualidade** e **detectar falhas antes da entrega**, aplicando boas práticas de QA.
 
 ---
 
@@ -64,7 +64,7 @@ Certifique-se de ter instalado:
 ### Passos para execução
 
 ```bash
-# Clone este repositório
+# Clone o repositório
 git clone https://github.com/seuusuario/nome-do-repositorio.git
 
 # Acesse a pasta do projeto
@@ -83,38 +83,59 @@ Após abrir o Cypress, escolha o modo de execução (interativo ou headless) e s
 
 ## 🌿 Controle de Versionamento e Boas Práticas de Git
 
-Para manter o repositório organizado e evitar conflitos de código, **todas as alterações devem ser realizadas em uma nova branch**.  
-As atualizações **não devem ser enviadas diretamente para a branch `main`**.
+Para manter o repositório organizado e evitar conflitos, **todas as alterações devem ser realizadas em uma nova branch**.  
+**Não envie alterações diretamente para a branch `main`.**
 
-### 🔧 Fluxo Padrão
+### 🔧 Fluxo Padrão de Branch
 
-1. Crie uma nova branch a partir da `main`:
-   ```bash
-   git checkout main
-   git pull origin main
-   git checkout -b nome-da-sua-branch
-   ```
+```bash
+# 1. Atualize a main local
+git checkout main
+git pull origin main
 
-2. Faça suas alterações e confirme os commits:
-   ```bash
-   git add .
-   git commit -m "Descrição clara do que foi alterado"
-   ```
+# 2. Crie uma nova branch a partir da main
+git checkout -b nome-da-sua-branch
 
-3. Envie a branch para o repositório remoto:
-   ```bash
-   git push origin nome-da-sua-branch
-   ```
+# 3. Faça suas alterações e confirme os commits
+git add .
+git commit -m "Descrição clara do que foi alterado"
+```
 
-4. Acesse o GitHub e **abra um Pull Request (PR)** para a branch `main`.  
-   O PR será revisado por outro membro da equipe antes da aprovação.
+---
 
-💡 **Dica:** Use nomes de branch descritivos, por exemplo:
-- `feature/adicionar-casos-teste-cenario-3`
-- `refactor/casos-teste-cenario-3`
-- `feature/adicionar-teste-login`
-- `fix/ajuste-elemento-carrinho`
-- `refactor/otimizar-estrutura-testes`
+## 🚨 Atualizando sua branch antes de abrir um Pull Request
+
+> ⚠️ **ATENÇÃO:** Atualizar sua branch com as últimas mudanças da `main` é **crucial** antes de abrir o Pull Request, evitando conflitos e garantindo que você não está enviando código desatualizado.
+
+```bash
+# 1️⃣ Certifique-se de estar na sua branch
+git checkout sua-branch
+
+# 2️⃣ Busque as atualizações do repositório remoto
+git fetch origin
+
+# 3️⃣ Faça o merge da main na sua branch
+git merge origin/main
+
+# ⚠️ Isso criará um commit de merge integrando atualizações da main com seu código
+
+# 4️⃣ Se houver conflitos:
+# - Resolva manualmente
+# - Adicione os arquivos resolvidos
+git add <arquivos>
+# - Finalize o commit do merge
+git commit
+
+# 5️⃣ Envie a branch atualizada para o repositório remoto
+git push origin sua-branch
+```
+
+### 💡 Dicas para Pull Request
+- Abra o PR para a branch `main`; outro membro da equipe fará a revisão antes da aprovação.  
+- Use nomes de branch descritivos:
+  - `feature/adicionar-casos-teste-cenario-3`  
+  - `refactor/otimizar-estrutura-testes`  
+  - `fix/ajuste-elemento-carrinho`
 
 ---
 
@@ -147,7 +168,7 @@ As atualizações **não devem ser enviadas diretamente para a branch `main`**.
 
 ## 🧪 Testes Automatizados
 
-Os testes foram estruturados para validar:
+Os testes cobrem:
 - Abertura e funcionamento das principais páginas do site  
 - Busca e filtro de produtos  
 - Adição de produtos ao carrinho  
@@ -156,15 +177,11 @@ Os testes foram estruturados para validar:
 
 ---
 
-## 📊 Relatórios desenvolvidos no bootcamp
+## 📊 Relatórios do Bootcamp
 
-| Nome                         | Link para visualizar                
-| ---------------------------------- | --------------------   | 
-| **Especificação de Bugs**       | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Especifica%C3%A7%C3%A3o%20de%20Bugs%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
-| **Especificação de Teste**       | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Especifica%C3%A7%C3%A3o%20de%20Teste%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
-| **Plano de Teste**       |[Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Plano%20de%20Teste%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
+| Nome                         | Link                  
+| -----------------------------| --------------------  
+| **Especificação de Bugs**    | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Especifica%C3%A7%C3%A3o%20de%20Bugs%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
+| **Especificação de Teste**   | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Especifica%C3%A7%C3%A3o%20de%20Teste%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
+| **Plano de Teste**           | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Plano%20de%20Teste%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
 | **Relatório de Teste**       | [Clique Aqui](https://github.com/vitorfantin/qa-bootcamp-atlantico-avanti-squad6/blob/main/documentos_relatorios_desenvolvidos/Relat%C3%B3rio%20de%20Teste%20-%20Squad%206%20-%20Quality%20Ninjas.docx.pdf)
-
-
-
----
