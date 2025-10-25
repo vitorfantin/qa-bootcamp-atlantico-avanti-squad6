@@ -140,7 +140,7 @@ As atualizações **não devem ser enviadas diretamente para a branch `main`**.
 | **Adriana Machado Martins Heck**   | 🔍 Analista de Testes |
 | **Michael Freitas Lima Machado**   | 🔍 Analista de Testes | [Clique Aqui](https://github.com/MichaelMachad0)   | [Clique Aqui](https://www.linkedin.com/in/michael-machado-qa)
 | **Guilherme Silva Santos**         | 🔍 Analista de Testes |
-| **Victor Ravel Santos Cavalcante** | 🔍 Analista de Testes |
+| **Victor Ravel Santos Cavalcante** | 🔍 Analista de Testes |  [Clique Aqui](https://github.com/VictorYates)   | [Clique Aqui](https://www.linkedin.com/in/victor-cavalcante-619b69311)
 | **Amanda Ramos**                   | 🔍 Analista de Testes |
 
 ---
