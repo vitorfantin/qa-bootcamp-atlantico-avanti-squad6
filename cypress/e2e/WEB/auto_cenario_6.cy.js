@@ -102,7 +102,7 @@ describe('Cenário 06 : Gerenciamento de conta ', () => {
         });
     });
 
-    it.only('CT006 - Excluir endereço existente - °', function () {
+    it('CT006 - Excluir endereço existente - °', function () {
 
         cy.fazerLogin(contas_cadastradas.emailCC2, contas_cadastradas.senhaCC2);
         cy.validarLogin();
