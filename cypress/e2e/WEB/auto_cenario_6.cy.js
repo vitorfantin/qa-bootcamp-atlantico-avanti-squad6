@@ -1,18 +1,27 @@
 import * as pageCenaria6 from "../../support/pages/page_cenario_teste6"
-import { wait1m, wait2m } from "../../support/constants"
-
-const email = "ditomah155@keevle.com"
-const senha = "Teste@1234"
+import { wait1m, wait2m, wai10segundos } from "../../support/constants"
+import * as contas_cadastradas from "../../fixtures/contas_cadastradas"
 
 const novaSenha = "NovaSenha@2025"
 const novaSenhaInvalida = "123"
 
+
 describe('Cenário 06 : Gerenciamento de conta ', () => {
     beforeEach("Realizar Login", () => {
-        cy.login(email, senha);
+        cy.visit("https://luma-demo.scandipwa.com/", {
+            onBeforeLoad(win) {
+                delete win.navigator.serviceWorker;
+            },
+        });
+        cy.wait(wai10segundos);
+        cy.reload();
+
+
     })
 
     it("CT001 - Editar informações pessoais", () => {
+        cy.fazerLogin(contas_cadastradas.emailCC1, contas_cadastradas.senhaCC1);
+        cy.validarLogin();
         cy.acessarPageMinhaConta()
         cy.validarAcessarPageMinhaConta()
         pageCenaria6.editarNome()
@@ -20,24 +29,32 @@ describe('Cenário 06 : Gerenciamento de conta ', () => {
     })
 
     it("CT002 - Alterar senhas com sucesso", () => {
+        cy.fazerLogin(contas_cadastradas.emailCC2, contas_cadastradas.senhaCC2);
+        cy.validarLogin();
         cy.acessarPageMinhaConta()
         cy.validarAcessarPageMinhaConta()
-        pageCenaria6.editarSenha(senha, novaSenha)
+        pageCenaria6.editarSenha(contas_cadastradas.senhaCC2, novaSenha)
         cy.wait(wait2m)
-        pageCenaria6.validarEditarSenha(email, novaSenha)
-        cy.restaurarSenha(email, senha, novaSenha)
+        pageCenaria6.validarEditarSenha(contas_cadastradas.emailCC2, novaSenha)
+        cy.restaurarSenha(contas_cadastradas.emailCC2, contas_cadastradas.senhaCC2, novaSenha)
     })
 
-    it("CT003 - Alterar senha inválida", () => {
+    it("CT003 - Alterar senha  - ARRUMAR ", () => {
+        cy.fazerLogin(contas_cadastradas.emailCC3, contas_cadastradas.senhaCC3);
+        cy.validarLogin();
+
         cy.acessarPageMinhaConta()
         cy.validarAcessarPageMinhaConta()
-        pageCenaria6.editarSenha(senha, novaSenhaInvalida)
+        pageCenaria6.editarSenha(contas_cadastradas.senhaCC3, novaSenhaInvalida)
         cy.verificarMensagem()
         cy.wait(wait1m)
         cy.validarSenhaInvalida()
     })
 
     it('CT004 - Adicionar novo endereço', () => {
+        cy.fazerLogin(contas_cadastradas.emailCC4, contas_cadastradas.senhaCC4);
+        cy.validarLogin();
+
         cy.acessarPageMinhaConta();
         cy.validarAcessarPageMinhaConta();
         pageCenaria6.acessarEnderecos();
@@ -46,14 +63,17 @@ describe('Cenário 06 : Gerenciamento de conta ', () => {
         pageCenaria6.cadastrarEnderecoEValidar();
     });
 
-    it('CT005 - Editar endereço existente', function() {
+    it('CT005 - Editar endereço existente - ARRUAMR', function () {
         const novoNumero = 200;
         const novoTelefone = 11888887777;
+
+        cy.fazerLogin(contas_cadastradas.emailCC1, contas_cadastradas.senhaCC1);
+        cy.validarLogin();
 
         cy.acessarPageMinhaConta();
         cy.validarAcessarPageMinhaConta();
         pageCenaria6.acessarEnderecos();
-        
+
         cy.wait(wait1m);
 
         cy.get('div.MyAccountAddressTable').its('length').then(quantidadeEnderecos => {
@@ -76,17 +96,21 @@ describe('Cenário 06 : Gerenciamento de conta ', () => {
             form.get('.MyAccount-Button').click();
 
             cy.wait(wait1m);
-         
+
             cy.get('div.MyAccountAddressBook').contains('td', novoNumero).should('be.visible');
             cy.get('div.MyAccountAddressBook').contains('td', novoTelefone).should('be.visible');
         });
     });
 
-    it('CT006 - Excluir endereço existente', function() {
+    it.only('CT006 - Excluir endereço existente - ARRUMAR', function () {
+
+        cy.fazerLogin(contas_cadastradas.emailCC2, contas_cadastradas.senhaCC2);
+        cy.validarLogin();
+
         cy.acessarPageMinhaConta();
         cy.validarAcessarPageMinhaConta();
         pageCenaria6.acessarEnderecos();
-        
+
         cy.wait(wait1m);
 
         cy.get('div.MyAccountAddressTable').its('length').then(quantidadeEnderecos => {
@@ -124,7 +148,7 @@ describe('Cenário 06 : Gerenciamento de conta ', () => {
                     .then(novaQuantidade => {
                         expect(novaQuantidade).to.equal(quantidadeEnderecos - 1);
                     });
-            }            
+            }
         });
     });
 })

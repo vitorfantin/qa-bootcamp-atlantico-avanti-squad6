@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import * as  contas_cadastradas from "../../fixtures/contas_cadastradas";
 
 describe('Cenario 01 - Cadastro', () => {
     const timeWait = 180000;
@@ -8,9 +9,7 @@ describe('Cenario 01 - Cadastro', () => {
     const sobrenome = faker.person.lastName();
     const email = faker.internet.email().toLowerCase();
     const senha = faker.internet.password(8);
-    const nomeFixo = 'Vitor'
-    const emailFixo = 'vitorsantos@gmail.com';
-    const senhaFixo = 'Vitor123';
+  
 
 
     beforeEach(() => {
@@ -47,8 +46,8 @@ describe('Cenario 01 - Cadastro', () => {
 
     it('CT 008 - Login com sucesso ', function () {
         cy.get('#myAccount path').click();
-        cy.get('#email').type(email);
-        cy.get('#password').type(senha);
+        cy.get('#email').type(contas_cadastradas.emailCC1);
+        cy.get('#password').type(contas_cadastradas.senhaCC1);
         cy.get('#root div.MyAccountOverlay-SignInButton button.Button', { timeout: timeWait }).click();
         cy.get('#root p.Notification-Text', { timeout: timeWait })
             .then(($el) => {
@@ -62,12 +61,12 @@ describe('Cenario 01 - Cadastro', () => {
         //login
         cy.get('#myAccount svg.UserIcon').click();
         cy.wait(timeWait2);
-        cy.get('#email').type(emailFixo);
-        cy.get('#password').type(senhaFixo);
+        cy.get('#email').type(contas_cadastradas.emailCC2);
+        cy.get('#password').type(contas_cadastradas.senhaCC2);
         cy.get('#root div.MyAccountOverlay-SignInButton button.Button').click();
         cy.wait(timeWait3);
         //verificar login
-        cy.get('#root div.Header-Welcome').should('contain', `Welcome, ${nomeFixo}!`);
+        cy.get('#root div.Header-Welcome').should('contain', `Welcome, ${contas_cadastradas.nomeCC2}!`);
 
         cy.wait(timeWait2);
         cy.reload();
