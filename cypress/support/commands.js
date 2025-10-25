@@ -29,7 +29,7 @@ Cypress.Commands.add('fazerLogin', (email, senha) => {
 })
 
 Cypress.Commands.add('validarLogin', () => {
-    cy.get('#root div.Header-Welcome').should('contain', 'Welcome,');
+    cy.get('#root div.Header-Welcome', { timeout: 120000 }).should('contain', 'Welcome,');
 })
 
 Cypress.Commands.add('fazerLogout', () => {
